@@ -1,0 +1,234 @@
+/* ============================================
+   Portfólio Lucas Emmanuel - Custom Styles
+   Complementa o Tailwind CSS com animações,
+   transições e estilos customizados.
+   ============================================ */
+
+/* --- Scrollbar Personalizada --- */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #1e3a5f;
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #0f2744;
+}
+
+/* --- Scroll Suave Global --- */
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 5rem;
+}
+
+/* --- Animações de Entrada (Scroll Reveal) --- */
+.reveal {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.reveal-left {
+	opacity: 0;
+	transform: translateX(-40px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-left.active {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.reveal-right {
+	opacity: 0;
+	transform: translateX(40px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-right.active {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+/* --- Delay para animações em sequência (cards) --- */
+.delay-100 {
+	transition-delay: 0.1s;
+}
+
+.delay-200 {
+	transition-delay: 0.2s;
+}
+
+.delay-300 {
+	transition-delay: 0.3s;
+}
+
+.delay-400 {
+	transition-delay: 0.4s;
+}
+
+/* --- Navbar: efeito de glass ao scrollar --- */
+.navbar-scrolled {
+	background-color: rgba(15, 23, 42, 0.95) !important;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Indicador de link ativo na navbar --- */
+.nav-link {
+	position: relative;
+	transition: color 0.3s ease;
+}
+
+.nav-link::after {
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #3b82f6;
+	transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+	width: 100%;
+}
+
+/* --- Cards: efeito hover com elevação --- */
+.card-hover {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Gradiente do Hero --- */
+.hero-gradient {
+	background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #1e40af 100%);
+}
+
+/* --- Efeito de digitação (typing) --- */
+.typing-cursor::after {
+	content: '|';
+	animation: blink 0.8s step-end infinite;
+	color: #3b82f6;
+	font-weight: 300;
+}
+
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+}
+
+/* --- Tag/Badge de tecnologia --- */
+.tech-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25rem;
+	padding: 0.25rem 0.75rem;
+	border-radius: 9999px;
+	font-size: 0.75rem;
+	font-weight: 500;
+	background-color: #dbeafe;
+	color: #1e40af;
+	transition: background-color 0.2s ease;
+}
+
+.tech-badge:hover {
+	background-color: #bfdbfe;
+}
+
+/* --- Divisor de seção decorativo --- */
+.section-divider {
+	width: 60px;
+	height: 4px;
+	background: linear-gradient(90deg, #1e40af, #3b82f6);
+	border-radius: 2px;
+	margin: 0 auto;
+}
+
+/* --- Ícone de contato animado --- */
+.contact-icon {
+	transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icon:hover {
+	transform: scale(1.15);
+}
+
+/* --- Mobile Menu: animação de slide --- */
+.mobile-menu {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-out;
+}
+
+.mobile-menu.open {
+	max-height: 400px;
+}
+
+/* --- Efeito de pulse no avatar --- */
+.avatar-ring {
+	position: relative;
+}
+
+.avatar-ring::before {
+	content: '';
+	position: absolute;
+	inset: -4px;
+	border-radius: 50%;
+	border: 2px solid #3b82f6;
+	animation: pulse-ring 2s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+	0%,
+	100% {
+		opacity: 0.4;
+		transform: scale(1);
+	}
+
+	50% {
+		opacity: 0.8;
+		transform: scale(1.05);
+	}
+}
+
+/* --- Timeline (Atuação Profissional) --- */
+.timeline-line {
+	position: absolute;
+	left: 1.25rem;
+	top: 0;
+	bottom: 0;
+	width: 2px;
+	background: linear-gradient(to bottom, #3b82f6, #1e3a5f);
+}
+
+.timeline-dot {
+	position: absolute;
+	left: 0.75rem;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	background-color: #3b82f6;
+	border: 3px solid #ffffff;
+	box-shadow: 0 0 0 2px #3b82f6;
+	z-index: 1;
+}
