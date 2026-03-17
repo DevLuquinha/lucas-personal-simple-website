@@ -1,11 +1,210 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio Lucas Emmanuel</title>
+    <meta name="description"
+        content="Portfólio de Lucas Emmanuel — Desenvolvedor de Software, estudante de ADS no IFTM.">
+    <meta name="author" content="Lucas Emmanuel">
+
+    <title>Lucas Emmanuel | Portfólio</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config (cores e fontes customizadas) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#eef2f7',
+                            100: '#d4dce8',
+                            200: '#a9b9d1',
+                            300: '#7e96ba',
+                            400: '#5373a3',
+                            500: '#1e3a5f',
+                            600: '#1a3254',
+                            700: '#152a47',
+                            800: '#0f2035',
+                            900: '#0a1624',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- Estilos customizados -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-    <h1>Hello World!</h1>
+
+<body class="font-sans bg-gray-50 text-gray-800 antialiased">
+
+    <!-- ==========================================
+       NAVBAR — Fixa no topo com scroll suave
+       ========================================== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- Logo / Nome -->
+                <a href="#home"
+                    class="text-white font-bold text-xl tracking-tight hover:text-blue-400 transition-colors">
+                    &lt;DevLuquinha/&gt;
+                </a>
+
+                <!-- Links Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Home</a>
+                    <a href="#itinerario"
+                        class="nav-link text-gray-300 hover:text-white text-sm font-medium">Itinerário</a>
+                    <a href="#atuacao" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Atuação</a>
+                    <a href="#projetos" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Projetos</a>
+                    <a href="#vida-pessoal" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Vida
+                        Pessoal</a>
+                </div>
+
+                <!-- Botão Mobile (Hamburger) -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none"
+                    aria-label="Abrir menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu Mobile -->
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="pb-4 space-y-2">
+                    <a href="#home"
+                        class="block text-gray-300 hover:text-white hover:bg-slate-800 px-3 py-2 rounded-lg text-sm">Home</a>
+                    <a href="#itinerario"
+                        class="block text-gray-300 hover:text-white hover:bg-slate-800 px-3 py-2 rounded-lg text-sm">Itinerário</a>
+                    <a href="#atuacao"
+                        class="block text-gray-300 hover:text-white hover:bg-slate-800 px-3 py-2 rounded-lg text-sm">Atuação</a>
+                    <a href="#projetos"
+                        class="block text-gray-300 hover:text-white hover:bg-slate-800 px-3 py-2 rounded-lg text-sm">Projetos</a>
+                    <a href="#vida-pessoal"
+                        class="block text-gray-300 hover:text-white hover:bg-slate-800 px-3 py-2 rounded-lg text-sm">Vida
+                        Pessoal</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ==========================================
+       SEÇÃO 1 — HOME (Hero)
+       Apresentação pessoal, acadêmica e contatos
+       ========================================== -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+                <!-- Texto principal -->
+                <div class="reveal-left">
+                    <p class="text-blue-400 font-medium text-sm tracking-widest uppercase mb-4">Olá, eu sou</p>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
+                        Lucas<br>Emmanuel
+                    </h1>
+                    <div class="flex items-center text-lg sm:text-xl text-gray-300 mb-6 h-8">
+                        <span id="typing-text" class="typing-cursor"></span>
+                    </div>
+                    <p class="text-gray-400 text-base leading-relaxed mb-8 max-w-lg">
+                        Estudante de <strong class="text-gray-200">Análise e Desenvolvimento de Sistemas</strong> no
+                        IFTM (3º período),
+                        focado em desenvolvimento com <strong class="text-gray-200">C#, .NET e ASP.NET</strong>.
+                    </p>
+
+                    <!-- Badges de tecnologia -->
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="tech-badge">C#</span>
+                        <span class="tech-badge">ASP.NET Core</span>
+                        <span class="tech-badge">Revit API</span>
+                        <span class="tech-badge">WPF/MVVM</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">HTML/CSS/JS</span>
+                        <span class="tech-badge">React/Next.js</span>
+                        <span class="tech-badge">Docker/GCP</span>
+                        <span class="tech-badge">REST API</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">Git/GitHub</span>
+                    </div>
+
+                    <!-- Botões de contato -->
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://github.com/DevLuquinha" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-sm">
+                            <!-- Ícone GitHub -->
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/devlucasemmanuel" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors text-sm">
+                            <!-- Ícone LinkedIn -->
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                            LinkedIn
+                        </a>
+                        <a href="mailto:lucas.emmanuel@estudante.iftm.edu.br"
+                            class="inline-flex items-center gap-2 border border-gray-500 text-gray-400 hover:bg-gray-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors text-sm">
+                            <!-- Ícone Email -->
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            E-mail
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Avatar / Ilustração -->
+                <div class="reveal-right flex justify-center">
+                    <div class="relative">
+                        <div
+                            class="avatar-ring w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden bg-slate-700 flex items-center justify-center">
+                            <!-- Placeholder Image-->
+                            <img src="assets/img/avatar-placeholder.jpg" alt="Avatar de Lucas Emmanuel"
+                                class="w-full h-full object-cover object-right-top transform hover:scale-105 transition-transform duration-300"> 
+                        </div>
+
+                        <!-- Badge decorativo -->
+                        <div
+                            class="absolute -bottom-2 -right-2 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                            3º Período ADS
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       SCRIPTS
+       Carregados ao final do body para performance
+       ========================================== -->
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
+
 </html>
