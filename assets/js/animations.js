@@ -38,7 +38,7 @@ const Animations = (() => {
 		const phrases = [
 			'Desenvolvedor C# & .NET',
 			'Estudante de ADS — IFTM',
-			'Apaixonado por tecnologia',
+			'Apaixonado por tecnologia'
 		];
 
 		let phraseIndex = 0;
