@@ -38,7 +38,11 @@ const Animations = (() => {
 		const phrases = [
 			'Desenvolvedor C# & .NET',
 			'Estudante de ADS — IFTM',
-			'Apaixonado por tecnologia'
+			'Apaixonado por tecnologia',
+			'Entusiasta de IA e inovação',
+			'Soluções em C# para Engenharia',
+			'Guitarrista nas horas vagas',
+			'Transformando café em código'
 		];
 
 		let phraseIndex = 0;
