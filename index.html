@@ -24,55 +24,42 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body class="font-sans bg-gray-50 text-gray-800 antialiased">
+<body class="antialiased" style="background-color: #f8f9fa;">
 
-    <!-- ==========================================
-       NAVBAR — Fixa no topo com scroll suave
-       ========================================== -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
+    <!-- NAVBAR (Navigation bar) -->
+    <nav id="navbar" class="navbar navbar-expand-md fixed-top navbar-dark bg-dark transition-all">
+        <div class="container">
 
-                <!-- Logo / Nome -->
-                <a href="#home"
-                    class="text-white font-bold text-xl tracking-tight hover:text-blue-400 transition-colors">
-                    &lt;DevLuquinha/&gt;
-                </a>
+            <!-- Logo/Name -->
+            <a class="navbar-brand fw-bold" href="#home" style="letter-spacing: -0.025em;">
+                &lt;DevLuquinha/&gt;
+            </a>
 
-                <!-- Links Desktop -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Home</a>
-                    <a href="#itinerario"
-                        class="nav-link text-gray-300 hover:text-white text-sm font-medium">Itinerário</a>
-                    <a href="#atuacao" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Atuação</a>
-                    <a href="#projetos" class="nav-link text-gray-300 hover:text-white text-sm font-medium">Projetos</a>
-                </div>
+            <!-- Navbar toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <!-- Botão Mobile (Hamburger) -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none"
-                    aria-label="Abrir menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Menu Mobile -->
-            <div id="mobile-menu" class="mobile-menu md:hidden">
-                <div class="pb-4 space-y-2">
-                    <a href="#home"
-                        class="block text-gray-300 hover:text-white hover:bg-slate-800 px-3 py-2 rounded-lg text-sm">Home</a>
-                    <a href="#itinerario"
-                        class="block text-gray-300 hover:text-white hover:bg-slate-800 px-3 py-2 rounded-lg text-sm">Itinerário</a>
-                    <a href="#atuacao"
-                        class="block text-gray-300 hover:text-white hover:bg-slate-800 px-3 py-2 rounded-lg text-sm">Atuação</a>
-                    <a href="#projetos"
-                        class="block text-gray-300 hover:text-white hover:bg-slate-800 px-3 py-2 rounded-lg text-sm">Projetos</a>
-                    <a href="#vida-pessoal"
-                        class="block text-gray-300 hover:text-white hover:bg-slate-800 px-3 py-2 rounded-lg text-sm">Vida
-                        Pessoal</a>
-                </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse justify-content-end" id="menuPrincipal">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#itinerario">Itinerário</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#atuacao">Atuação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projetos">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="turma.html">Sobre a Turma</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
