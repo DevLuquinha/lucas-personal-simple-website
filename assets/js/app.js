@@ -5,7 +5,8 @@
    estiver pronto.
    ============================================ */
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     Navigation.init();
+    await Data.init();
     Animations.init();
 });
