@@ -134,9 +134,70 @@ const Data = (() => {
         }
     }
 
+    async function loadProjects() {
+        try {
+            const response = await fetch(basePath);
+            const data = await response.json();
+
+            const container = document.getElementById('projetos-container');
+            if (!container || !data.projetos) return;
+
+            container.innerHTML = '';
+
+            data.projetos.forEach((projeto, index) => {
+                // Map the tags (like "Profissional", "Concluído")
+                const tagsHTML = projeto.tags.map(tag =>
+                    `<span class="badge bg-${tag.cor} bg-opacity-10 text-${tag.cor === 'warning' ? 'dark' : tag.cor} border border-${tag.cor} border-opacity-25 rounded-pill px-3 py-1 me-2 mb-2">${tag.nome}</span>`
+                ).join('');
+
+                // Map the technology pills
+                const techHTML = projeto.tecnologias.map(tech =>
+                    `<span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 rounded-pill px-3 py-1 me-2 mb-2">${tech}</span>`
+                ).join('');
+
+                // Build the Bootstrap Card
+                const cardHTML = `
+                <div class="col-12 col-md-6 col-lg-4 reveal delay-${(index % 3 + 1) * 100}">
+                    <div class="card h-100 border-light shadow-sm rounded-4 overflow-hidden card-hover">
+                        
+                        <div class="d-flex align-items-center justify-content-center" style="height: 192px; background: ${projeto.gradient};">
+                            <svg width="64" height="64" fill="none" stroke="${projeto.svgColor}" viewBox="0 0 24 24">
+                                ${projeto.svgIcon}
+                            </svg>
+                        </div>
+                        
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="d-flex flex-wrap mb-2">
+                                ${tagsHTML}
+                            </div>
+                            
+                            <h3 class="fw-bold text-dark fs-5 mb-3">${projeto.titulo}</h3>
+                            
+                            <p class="text-secondary mb-4 flex-grow-1" style="font-size: 0.875rem; line-height: 1.6;">
+                                ${projeto.descricao}
+                            </p>
+                            
+                            <div class="mt-auto border-top pt-3">
+                                ${techHTML}
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            `;
+
+                container.innerHTML += cardHTML;
+            });
+
+        } catch (error) {
+            console.error("Error fetching projects data:", error);
+        }
+    }
+
     async function init() {
         await loadItinerary();
         await loadExperience();
+        await loadProjects();
     }
 
     return { init };
