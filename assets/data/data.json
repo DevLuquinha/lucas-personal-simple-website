@@ -1,0 +1,93 @@
+{
+    "itinerario": [
+        {
+            "id": 1,
+            "titulo": "Algoritmos e Programação",
+            "periodo": "1º Período — Linguagem C",
+            "descricao": "Fundamentos de lógica de programação, estruturas condicionais, laços de repetição, vetores, matrizes e funções na linguagem C.",
+            "corTema": "primary",
+            "svgIcon": "<path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4' />",
+            "pontosPositivos": [
+                "Base sólida de lógica que se aplica a qualquer linguagem",
+                "Contato com ponteiros e gerenciamento de memória"
+            ],
+            "pontosNegativos": [
+                "Para quem já tem experiência prévia, pode ser repetitivo e pouco desafiador"
+            ]
+        },
+        {
+            "id": 2,
+            "titulo": "Desenvolvimento Web",
+            "periodo": "1º Período — HTML e CSS",
+            "descricao": "Fundamentos de HTML5 semântico, CSS3, responsividade, acessibilidade web e introdução a página web.",
+            "corTema": "info",
+            "svgIcon": "<path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9' />",
+            "pontosPositivos": [
+                "Habilidades essenciais para desenvolvimento front-end"
+            ],
+            "pontosNegativos": [
+                "Muito básico, falta aprofundar em JavaScript e frameworks modernos para ser mais relevante no mercado"
+            ]
+        },
+        {
+            "id": 3,
+            "titulo": "Fundamentos de Matemática",
+            "periodo": "1º Período — Teoria",
+            "descricao": "Teoria dos conjuntos, funções, equações, matrizes, frações, base sólida de matemática.",
+            "corTema": "danger",
+            "svgIcon": "<path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z' />",
+            "pontosPositivos": [
+                "Desenvolve raciocínio lógico e pensamento computacional"
+            ],
+            "pontosNegativos": [
+                "Conexão com programação nem sempre é evidente de imediato"
+            ]
+        },
+        {
+            "id": 4,
+            "titulo": "Estrutura de Dados",
+            "periodo": "2º Período — Linguagem C",
+            "descricao": "Struct, ponteiros, listas encadeadas, pilhas, filas, função recursiva, árvores binárias.",
+            "corTema": "secondary",
+            "svgIcon": "<path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10' />",
+            "pontosPositivos": [
+                "Essencial para entender performance e otimização",
+                "Conteúdo cobrado em entrevistas técnicas",
+                "Utilização da plataforma SPOJ para prática de algoritmos e estrutura de dados"
+            ],
+            "pontosNegativos": [
+                "Conceitos abstratos dificultam a compreensão."
+            ]
+        },
+        {
+            "id": 5,
+            "titulo": "Modelagem de Banco de Dados",
+            "periodo": "2º Período — BrModelo",
+            "descricao": "Modelagem de dados, modelo entidade-relacionamento, normalização, criação de MER e boas práticas de banco de dados.",
+            "corTema": "warning",
+            "svgIcon": "<path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4' />",
+            "pontosPositivos": [
+                "Fundamental para qualquer sistema que persista dados",
+                "Fundamentos de modelagem que ajudam a criar bancos de dados eficientes e bem estruturados"
+            ],
+            "pontosNegativos": [
+                "Muito teórica, falta de prática com SGBDs reais e SQL avançado para ser mais aplicável no mercado"
+            ]
+        },
+        {
+            "id": 6,
+            "titulo": "Linguagem Script para Web",
+            "periodo": "2º Período — JavaScript",
+            "descricao": "Linguagem de programação interpretada, usada principalmente no lado do cliente para criar experiências web interativas. Aprendizado de sintaxe, manipulação do DOM, eventos, funções assíncronas e introdução a frameworks modernos (Tailwind CSS).",
+            "corTema": "success",
+            "svgIcon": "<path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z' />",
+            "pontosPositivos": [
+                "Linguagem onipresente no desenvolvimento web, essencial para front-end",
+                "Dando vida às páginas web, permitindo interatividade e conhecimento de frameworks modernos como Tailwind CSS"
+            ],
+            "pontosNegativos": [
+                "Sintaxe horrível e comportamento IMPREVISÍVEL! ODEIO JavaScript!"
+            ]
+        }
+    ]
+}
