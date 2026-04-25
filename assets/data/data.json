@@ -89,5 +89,96 @@
                 "Sintaxe horrível e comportamento IMPREVISÍVEL! ODEIO JavaScript!"
             ]
         }
+    ],
+    "experiencia": [
+        {
+            "tipo": "Atual Emprego",
+            "periodo": "2025 — Presente",
+            "cargo": "Desenvolvedor Backend",
+            "local": "Escritório de Engenharia Civíl - Makeng",
+            "descricao": "Desenvolvimento do <strong>MAKHUB</strong>, um plugin comercial para Autodesk Revit. Responsável pela construção de todo <strong>ecossistema backend</strong>. Criação dos comandos, integração com a API do Revit, desenvolvimento de API's REST para segurança da aplicação e coordenação com a equipe de desenvolvimento. Além disso, sou responsável pela criação de plugins para AutoCAD com foco em automação de processos e integração de sistemas utilizando C# e APIs da Autodesk.",
+            "tecnologias": [
+                "C#",
+                "ASP.NET Core",
+                "WPF + MVVM",
+                "Revit API",
+                "AutoCAD API",
+                "Python + Pandas"
+            ],
+            "corTexto": "success",
+            "corBg": "success"
+        },
+        {
+            "tipo": "Atual Graduação",
+            "periodo": "2025 — Em curso",
+            "cargo": "Graduação em ADS",
+            "local": "IFTM — Instituto Federal do Triângulo Mineiro",
+            "descricao": "Cursando o 3º período de Análise e Desenvolvimento de Sistemas. Foco em desenvolvimento back-end e aprendizado em PO e POO, além de participação ativa em projetos de extensão.",
+            "tecnologias": [],
+            "corTexto": "primary",
+            "corBg": "primary"
+        },
+        {
+            "tipo": "Estágio",
+            "periodo": "2024 — 2025",
+            "cargo": "Estagiário de Desenvolvimento",
+            "local": "Escritório de Engenharia Civíl - Makeng",
+            "descricao": "Estágio em desenvolvimento de software, focado em automação de processos e integração de sistemas utilizando C# e APIs da Autodesk. Modelagem de famílias para o Revit e criação de plugins.",
+            "tecnologias": [
+                "C#",
+                "Revit API",
+                "AutoCAD API",
+                "Modelagem 3D",
+                "BIM"
+            ],
+            "corTexto": "warning",
+            "corBg": "warning"
+        },
+        {
+            "tipo": "1° Emprego",
+            "periodo": "2023 — 2024",
+            "cargo": "Atendente de Lanchonete",
+            "local": "Pastelaria J.R",
+            "descricao": "Atendimento ao cliente, preparo dos pasteis, gerenciamento de caixa. Desenvolvimento de habilidades de comunicação, trabalho em equipe e resolução de problemas em um ambiente dinâmico. PRODUÇÃO EM MASSA DE PASTEIS! kkkk",
+            "tecnologias": [],
+            "corTexto": "secondary",
+            "corBg": "secondary"
+        },
+        {
+            "tipo": "Ensino Médio",
+            "periodo": "2022 — 2024",
+            "cargo": "Técnico em Computação Gráfica + Ensino Médio",
+            "local": "IFTM — Instituto Federal do Triângulo Mineiro",
+            "descricao": "Curso técnico integrado ao ensino médio, com foco em computação gráfica, modelagem 3D, animação e desenvolvimento de jogos. Desenvolvimento de projetos práticos utilizando softwares como Blender, Unity e Visual Studio.",
+            "tecnologias": [],
+            "corTexto": "info",
+            "corBg": "info"
+        }
+    ],
+    "interesses": [
+        {
+            "titulo": "Desenvolvimento Back-end",
+            "descricao": "Desenvolvimento backend em geral, criando sistemas escaláveis, seguros e manuteníveis. Com experiência em linguagens como C#, Java ou Python.",
+            "icone": "<path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2' />",
+            "cor": "primary"
+        },
+        {
+            "titulo": "Cybersecurity",
+            "descricao": "Segurança de sistemas, proteção de dados e análise de riscos. Interesse em segurança de aplicações e proteção de dados sensíveis.",
+            "icone": "<path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z' />",
+            "cor": "danger"
+        },
+        {
+            "titulo": "Arquitetura de Software",
+            "descricao": "Clean Architecture, SOLID, padrões de projeto e código manutenível. Foco em criação de sistemas escaláveis e sustentáveis.",
+            "icone": "<path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4' />",
+            "cor": "info"
+        },
+        {
+            "titulo": "DevOps & CI/CD",
+            "descricao": "Práticas de integração contínua e entrega contínua, automação de testes e implantação de aplicações em ambientes de produção.",
+            "icone": "<path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15' />",
+            "cor": "warning"
+        }
     ]
 }
