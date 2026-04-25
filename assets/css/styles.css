@@ -173,6 +173,27 @@ html {
 	transform: scale(1.15);
 }
 
+/* Nav bar colors */
+.bg-navy-original {
+	background-color: #0f172a !important;
+}
+
+.navbar-collapse {
+	background-color: #0f172a;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+/* Navbar tablet and up */
+@media (min-width: 768px) {
+	.navbar-collapse {
+		background-color: transparent;
+		padding: 0;
+		margin-top: 0;
+	}
+}
+
 /* --- Mobile Menu: animação de slide --- */
 .mobile-menu {
 	max-height: 0;
@@ -199,6 +220,7 @@ html {
 }
 
 @keyframes pulse-ring {
+
 	0%,
 	100% {
 		opacity: 0.4;
