@@ -1,7 +1,9 @@
+const basePath = './assets/data/data.json';
+
 const Data = (() => {
     async function loadItinerary() {
         try {
-            const response = await fetch('assets/data/data.json');
+            const response = await fetch(basePath);
             const data = await response.json();
 
             const container = document.getElementById('itinerario-container');
@@ -68,8 +70,73 @@ const Data = (() => {
         }
     }
 
+    async function loadExperience() {
+        try {
+            const response = await fetch(basePath);
+            const data = await response.json();
+
+            const xpContainer = document.getElementById('experiencia-container');
+            const intContainer = document.getElementById('interesses-container');
+
+            if (xpContainer && data.experiencia) {
+                xpContainer.innerHTML = '';
+                data.experiencia.forEach(item => {
+                    const badgesHTML = item.tecnologias.map(tech =>
+                        `<span class="badge bg-secondary bg-opacity-10 text-dark border me-1 mb-1 fw-normal">${tech}</span>`
+                    ).join('');
+
+                    xpContainer.innerHTML += `
+                    <div class="position-relative mb-4">
+                        <div class="position-absolute bg-white border border-3 border-${item.corBg} rounded-circle" style="width: 14px; height: 14px; left: -31px; top: 6px;"></div>
+                        
+                        <div class="card border-light shadow-sm rounded-4 card-hover">
+                            <div class="card-body p-4">
+                                <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                                    <span class="badge bg-${item.corBg} bg-opacity-10 text-${item.corTexto} rounded-pill">${item.tipo}</span>
+                                    <span class="text-secondary" style="font-size: 0.75rem;">${item.periodo}</span>
+                                </div>
+                                <h4 class="fw-bold text-dark fs-5 mb-1">${item.cargo}</h4>
+                                <p class="text-primary fw-medium mb-3" style="font-size: 0.875rem;">${item.local}</p>
+                                <p class="text-secondary" style="font-size: 0.875rem;">${item.descricao}</p>
+                                <div class="mt-2">
+                                    ${badgesHTML}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                });
+            }
+
+            if (intContainer && data.interesses) {
+                intContainer.innerHTML = '';
+                data.interesses.forEach(interesse => {
+                    intContainer.innerHTML += `
+                    <div class="card border-light shadow-sm rounded-4 card-hover">
+                        <div class="card-body p-4 d-flex align-items-start gap-3">
+                            <div class="d-flex align-items-center justify-content-center bg-${interesse.cor} bg-opacity-10 rounded-3 shrink-0" style="width: 48px; height: 48px;">
+                                <svg class="text-${interesse.cor}" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    ${interesse.icone}
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="fw-bold text-dark fs-6 mb-1">${interesse.titulo}</h4>
+                                <p class="text-secondary mb-0" style="font-size: 0.875rem;">${interesse.descricao}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                });
+            }
+
+        } catch (error) {
+            console.error("Erro ao carregar os dados de atuação:", error);
+        }
+    }
+
     async function init() {
         await loadItinerary();
+        await loadExperience();
     }
 
     return { init };
