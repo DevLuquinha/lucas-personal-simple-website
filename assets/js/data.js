@@ -1,4 +1,6 @@
-const basePath = './assets/data/data.json';
+const basePath = window.location.pathname.includes('turma.html')
+    ? '../data/data.json'
+    : 'assets/data/data.json';
 
 const Data = (() => {
     async function loadItinerary() {
@@ -194,10 +196,44 @@ const Data = (() => {
         }
     }
 
+    async function loadStudents() {
+        try {
+            const tabela = document.getElementById('tabela-alunos');
+            if (!tabela) {
+                return;
+            }
+
+            const response = await fetch(basePath);
+            const data = await response.json();
+
+            if (data.alunos) {
+                tabela.innerHTML = '';
+
+                data.alunos.forEach((aluno, index) => {
+                    tabela.innerHTML += `
+                    <tr>
+                        <th scope="row" class="px-4 text-secondary">${index + 1}</th>
+                        <td class="fw-medium text-dark">${aluno.nome}</td>
+                        <td><a href="mailto:${aluno.email}" class="text-decoration-none">${aluno.email}</a></td>
+                    </tr>
+                `;
+                });
+            }
+
+        } catch (error) {
+            console.error("Erro ao carregar a lista de alunos:", error);
+            const tabela = document.getElementById('tabela-alunos');
+            if (tabela) {
+                tabela.innerHTML = `<tr><td colspan="3" class="text-center text-danger py-4">Erro ao carregar os dados. Verifique o caminho do data.json.</td></tr>`;
+            }
+        }
+    }
+
     async function init() {
         await loadItinerary();
         await loadExperience();
         await loadProjects();
+        await loadStudents();
     }
 
     return { init };
