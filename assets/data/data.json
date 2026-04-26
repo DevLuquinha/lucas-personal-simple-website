@@ -257,5 +257,59 @@
             "svgColor": "#bfdbfe",
             "svgIcon": "<path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4' />"
         }
+    ],
+    "alunos": [
+        {
+            "nome": "ARTHUR DE SOUZA PAIVA ACEDO",
+            "email": "arthur.acedo@estudante.iftm.edu.br"
+        },
+        {
+            "nome": "BRENO DOMINGOS SILVA",
+            "email": "breno.domingos@estudante.iftm.edu.br"
+        },
+        {
+            "nome": "DANIEL IGOR MASO DOS REIS",
+            "email": "daniel.igor@estudante.iftm.edu.br"
+        },
+        {
+            "nome": "DHIEGO DE OLIVEIRA LOPES",
+            "email": "dhiego.lopes@estudante.iftm.edu.br"
+        },
+        {
+            "nome": "ERICK SANTOS ALVES",
+            "email": "erick.alves@estudante.iftm.edu.br"
+        },
+        {
+            "nome": "HEBERT OLIVEIRA BRAGA",
+            "email": "hebert.braga@estudante.iftm.edu.br"
+        },
+        {
+            "nome": "LUIS FELIPE SILVA MARTINELLI",
+            "email": "luis.martinelli@estudante.iftm.edu.br"
+        },
+        {
+            "nome": "LUIZ GUSTAVO MAZALA DE OLIVEIRA",
+            "email": "luiz.mazala@estudante.iftm.edu.br"
+        },
+        {
+            "nome": "MÁRCIO ALVES JÚNIOR",
+            "email": "marcio.junior@estudante.iftm.edu.br"
+        },
+        {
+            "nome": "PEDRO LUCAS PEREIRA SILVA",
+            "email": "pedro.lps@estudante.iftm.edu.br"
+        },
+        {
+            "nome": "RAQUEL DE JESUS MOTA",
+            "email": "raquel.mota@estudante.iftm.edu.br"
+        },
+        {
+            "nome": "RICARDO RODRIGUES LEAL JUNIOR",
+            "email": "ricardo.junior@estudante.iftm.edu.br"
+        },
+        {
+            "nome": "THALITA MARTINS BENICIO COSTA",
+            "email": "thalita.martins@estudante.iftm.edu.br"
+        }
     ]
 }
